@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 4. BOOKING FORM SUBMISSION (Google Script + WhatsApp) ---
     
     // REPLACE THIS URL WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
-    const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE'; 
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyrLoRyL2_hGQBLqIUpSmcnFSWLuoAVBF7i8aCqcHNCa_NsDDP8BfnDr4f7Uxpl59j1mw/exec'; 
     
     const bookingForm = document.getElementById('bookingForm');
     
