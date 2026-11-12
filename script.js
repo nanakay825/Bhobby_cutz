@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // --- 1. POPULATE TIME SLOTS (8 AM to 9 PM, 1-hour intervals) ---
     const timeSelect = document.getElementById('time');
-    for (let i = 8; i <= 21; i++) {
+    for (let i = 8; i <= 20; i++) {
         let hour = i > 12 ? i - 12 : i;
         let ampm = i >= 12 ? 'PM' : 'AM';
         if (hour === 0) hour = 12; // Handle midnight if needed, though we stop at 9PM
