@@ -1,0 +1,346 @@
+/* --- GLOBAL STYLES --- */
+:root {
+    --black: #0a0a0a;
+    --dark-grey: #1a1a1a;
+    --gold: #d4b872;
+    --white: #ffffff;
+    --text-grey: #cccccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- NAVBAR --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(10, 10, 10, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+.nav-logo {
+    height: 70px;
+    border-radius: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* --- BUTTONS --- */
+.btn-primary {
+    background-color: var(--gold);
+    color: var(--black);
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: transform 0.2s, background 0.2s;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #e6c98a;
+    transform: scale(1.05);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=2000&auto=format&fit=crop') center/cover;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.motto {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    color: var(--text-grey);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+/* --- SECTIONS --- */
+.section {
+    padding: 5rem 5%;
+}
+
+.dark-bg {
+    background-color: var(--dark-grey);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--gold);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-grey);
+    margin-bottom: 3rem;
+}
+
+/* --- CAROUSEL --- */
+.carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-track {
+    display: flex;
+    list-style: none;
+    transition: transform 0.5s ease-in-out;
+    height: 500px; /* Adjust based on image sizes */
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.carousel-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain; /* Keeps full image visible */
+}
+
+.carousel-btn {
+    background: rgba(212, 184, 114, 0.8);
+    color: var(--black);
+    border: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+    background: var(--gold);
+}
+
+.prev { left: -20px; }
+.next { right: -20px; }
+
+/* --- PRICING --- */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.price-card {
+    background: var(--black);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--gold);
+    margin: 1rem 0;
+}
+
+/* --- BOOKING FORM --- */
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--dark-grey);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--gold);
+}
+
+.form-group input, 
+.form-group select {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: var(--black);
+    border-top: 1px solid #222;
+    padding: 3rem 5% 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-info p {
+    margin-bottom: 0.5rem;
+    color: var(--text-grey);
+}
+
+.footer-info i {
+    color: var(--gold);
+    margin-right: 10px;
+    width: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #222;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    .nav-links a:not(.btn-primary) {
+        display: none; /* Hide links on mobile for clean look */
+    }
+    
+    .carousel-track {
+        height: 400px;
+    }
+    
+    .prev { left: 10px; }
+    .next { right: 10px; }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+}

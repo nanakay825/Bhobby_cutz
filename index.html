@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bobby Cuts | Fine Grooming & Cuts</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Bobby Cuts Logo" class="nav-logo">
+        </div>
+        <div class="nav-links">
+            <a href="#gallery">Gallery</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#book" class="btn-primary">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>YOUR STYLE.<br>YOUR STATEMENT.</h1>
+            <p class="motto">"Bobby cuts better"</p>
+            <p class="subtitle">Fresh cuts. Sharp fades. Premium grooming. Experience the difference.</p>
+            <a href="#book" class="btn-primary hero-btn">BOOK YOUR APPOINTMENT <i class="fas fa-arrow-down"></i></a>
+        </div>
+    </header>
+
+    <!-- Gallery Section (Carousel) -->
+    <section id="gallery" class="section">
+        <h2 class="section-title">OUR WORK</h2>
+        <p class="section-subtitle">Swipe to see some of our finest cuts.</p>
+        
+        <div class="carousel-container">
+            <button class="carousel-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide"><img src="images/work1.jpg" alt="Haircut 1"></li>
+                    <li class="carousel-slide"><img src="images/work2.jpg" alt="Haircut 2"></li>
+                    <li class="carousel-slide"><img src="images/work3.jpg" alt="Haircut 3"></li>
+                    <li class="carousel-slide"><img src="images/work4.jpg" alt="Haircut 4"></li>
+                    <li class="carousel-slide"><img src="images/work5.jpg" alt="Haircut 5"></li>
+                </ul>
+            </div>
+            <button class="carousel-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section dark-bg">
+        <h2 class="section-title">SERVICES & PRICING</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Adults</h3>
+                <p class="price">GHC 30</p>
+                <p>Sharp fades, line-ups, and full grooming.</p>
+            </div>
+            <div class="price-card">
+                <h3>Young People</h3>
+                <p class="price">GHC 25</p>
+                <p>Stylish cuts for the younger generation.</p>
+            </div>
+            <div class="price-card">
+                <h3>Children</h3>
+                <p class="price">GHC 20</p>
+                <p>Clean, patient, and fresh cuts for kids.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book" class="section">
+        <h2 class="section-title">BOOK AN APPOINTMENT</h2>
+        <p class="section-subtitle">Open Monday to Sunday, 8:00 AM - 9:00 PM</p>
+        
+        <form id="bookingForm" class="booking-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required placeholder="John Doe">
+            </div>
+            
+            <div class="form-group">
+                <label for="service">Service Type</label>
+                <select id="service" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="Adults (GHC 30)">Adults - GHC 30</option>
+                    <option value="Young People (GHC 25)">Young People - GHC 25</option>
+                    <option value="Children (GHC 20)">Children - GHC 20</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Time (1-hour intervals)</label>
+                <select id="time" required>
+                    <option value="" disabled selected>Select a time</option>
+                    <!-- JS will populate this -->
+                </select>
+            </div>
+
+            <button type="submit" class="btn-primary submit-btn">CONFIRM BOOKING VIA WHATSAPP</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>BOBBY CUTS</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Ashaiman-Lebanon Z2, Z2-A-586, MANTSEMAN</p>
+                <p><i class="fas fa-phone"></i> +233 59 665 6436</p>
+                <p><i class="fas fa-envelope"></i> bhobbygh88@gmail.com</p>
+            </div>
+            <div class="footer-social">
+                <h3>FOLLOW US</h3>
+                <div class="social-icons">
+                    <a href="https://instagram.com/bhobby.cutz" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com/@bhobby.cutz" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bobby Cuts. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
